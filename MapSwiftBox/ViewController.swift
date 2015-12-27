@@ -25,7 +25,6 @@ class ViewController: UIViewController {
         
         // Set the map's center coordinate -26.4537736,-49.1179425
         mapView.setCenterCoordinate(CLLocationCoordinate2D(latitude: lat, longitude: lon), zoomLevel: 15, animated: false)
-        view.addSubview(mapView)
         
         // Declare the annotation `point` and set its coordinates, title, and subtitle
         let point = MGLPointAnnotation()
@@ -35,6 +34,8 @@ class ViewController: UIViewController {
         
         // Add annotation `point` to the map
         mapView.addAnnotation(point)
+        
+        view.addSubview(mapView)
     }
 
     override func didReceiveMemoryWarning() {
