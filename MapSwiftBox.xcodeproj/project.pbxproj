@@ -38,6 +38,7 @@
 		A0FA4C011C306FA500E4927D = {
 			isa = PBXGroup;
 			children = (
+				A0FA4C1F1C30739600E4927D /* Supporting Files */,
 				A0FA4C0C1C306FA500E4927D /* MapSwiftBox */,
 				A0FA4C0B1C306FA500E4927D /* Products */,
 			);
@@ -62,6 +63,13 @@
 				A0FA4C191C306FA500E4927D /* Info.plist */,
 			);
 			path = MapSwiftBox;
+			sourceTree = "<group>";
+		};
+		A0FA4C1F1C30739600E4927D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
