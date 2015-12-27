@@ -12,6 +12,9 @@ import Mapbox
 class ViewController: UIViewController {
     
     var mapView: MGLMapView!
+    
+    let lat: CLLocationDegrees = -26.4537736
+    let lon: CLLocationDegrees = -49.1179425
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +24,17 @@ class ViewController: UIViewController {
         mapView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         
         // Set the map's center coordinate -26.4537736,-49.1179425
-        mapView.setCenterCoordinate(CLLocationCoordinate2D(latitude: -26.4537736, longitude: -49.1179425), zoomLevel: 15, animated: false)
+        mapView.setCenterCoordinate(CLLocationCoordinate2D(latitude: lat, longitude: lon), zoomLevel: 15, animated: false)
         view.addSubview(mapView)
         
         // Declare the annotation `point` and set its coordinates, title, and subtitle
-        let point
+        let point = MGLPointAnnotation()
+        point.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+        point.title = "Hello, Mapbox!"
+        point.subtitle = "Welcome to nowhere!"
+        
+        // Add annotation `point` to the map
+        mapView.addAnnotation(point)
     }
 
     override func didReceiveMemoryWarning() {
