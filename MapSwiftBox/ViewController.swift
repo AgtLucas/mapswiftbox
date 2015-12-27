@@ -20,7 +20,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         super.viewDidLoad()
         
         // Initialize the Map View
-        mapView = MGLMapView(frame: view.bounds)
+        mapView = MGLMapView(frame: view.bounds, styleURL: MGLStyle.darkStyleURL())
         mapView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         
         // Set the map's center coordinate -26.4537736,-49.1179425
