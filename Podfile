@@ -4,6 +4,6 @@
 use_frameworks!
 
 target 'MapSwiftBox' do
-
+  pod 'Mapbox-iOS-SDK'
 end
 
