@@ -20,9 +20,12 @@ class ViewController: UIViewController {
         mapView = MGLMapView(frame: view.bounds)
         mapView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         
-        // Set the map's center coordinate
-        mapView.setCenterCoordinate(CLLocationCoordinate2D(latitude: 38.894368, longitude: -77.036487), zoomLevel: 15, animated: false)
+        // Set the map's center coordinate -26.4537736,-49.1179425
+        mapView.setCenterCoordinate(CLLocationCoordinate2D(latitude: -26.4537736, longitude: -49.1179425), zoomLevel: 15, animated: false)
         view.addSubview(mapView)
+        
+        // Declare the annotation `point` and set its coordinates, title, and subtitle
+        let point
     }
 
     override func didReceiveMemoryWarning() {
